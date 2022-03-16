@@ -6,7 +6,7 @@ $Orange: hsl(34, 97%, 64%);
 $Blue: hsl(212, 86%, 64%);
 
 @mixin background($url) {
-  background: url($url) no-repeat top 120px left 255px;
+  background: url($url) no-repeat top 120px left 205px;
 }
 
 @mixin border-top($color) {
@@ -58,14 +58,14 @@ body {
 
   .card-section {
     // background-color: red;
-    width: 90%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin: auto;
 
     .card {
-      width: 350px;
+      width: 300px;
       height: 220px;
       // background-color: aliceblue;
       margin: auto;
