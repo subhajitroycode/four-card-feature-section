@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+@mixin background($url) {
+  background: url($url) no-repeat top 120px left 255px;
+}
+
+@mixin border-top($color) {
+  border-top: 5px solid $color;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  height: 100vh;
+}
+
+.main-section {
+  height: min(100% - 18px);
+  width: 80%;
+  margin: auto;
+  padding-top: 20px;
+  //   background-color: red;
+
+  .main-header {
+    text-align: center;
+    padding-top: 25px;
+    margin: 0px auto 30px;
+    // background-color: red;
+    width: 44%;
+
+    h1 {
+      font-weight: 200;
+
+      span {
+        display: block;
+        font-weight: 600;
+      }
+    }
+
+    p {
+      padding-top: 20px;
+      opacity: 50%;
+      font-size: 1em;
+    }
+  }
+
+  .card-section {
+    // background-color: red;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: auto;
+
+    .card {
+      width: 350px;
+      height: 220px;
+      // background-color: aliceblue;
+      margin: auto;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: rgb(17 12 46 / 15%) -10px 12px 24px 6px;
+
+      p {
+        font-size: 13px;
+        opacity: 50%;
+        margin-top: 8px;
+      }
+
+      &:nth-of-type(1) {
+        grid-row: 1 / 3;
+        @include border-top($Cyan);
+        @include background("../images/icon-supervisor.svg");
+      }
+
+      &:nth-of-type(2) {
+        @include border-top($Red);
+        @include background("../images/icon-team-builder.svg");
+      }
+
+      &:nth-of-type(3) {
+        @include border-top($Orange);
+        @include background("../images/icon-karma.svg");
+      }
+
+      &:nth-of-type(4) {
+        grid-row: 1 / 3;
+        grid-column: 3;
+        @include border-top($Blue);
+        @include background("../images/icon-calculator.svg");
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
