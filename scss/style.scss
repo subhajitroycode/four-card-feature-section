@@ -63,6 +63,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin: auto;
+    justify-content: center;
 
     .card {
       width: 300px;
@@ -105,9 +106,12 @@ body {
   }
 }
 
+@import "mobile";
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  // margin-top: 20px;
 }
 
 .attribution a {

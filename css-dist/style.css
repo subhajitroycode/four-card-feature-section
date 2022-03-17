@@ -42,6 +42,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin: auto;
+  justify-content: center;
 }
 .main-section .card-section .card {
   width: 300px;
@@ -76,6 +77,36 @@ body {
   background: url("../images/icon-calculator.svg") no-repeat top 120px left 205px;
 }
 
+@media (max-width: 900px) {
+  .main-section {
+    width: 100%;
+    height: auto;
+  }
+  .main-section .main-header {
+    width: 82%;
+    padding: 20px 0px;
+  }
+  .main-section .main-header h1 {
+    font-size: 1.5rem;
+  }
+  .main-section .card-section {
+    width: 100%;
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
+  .main-section .card-section .card:nth-of-type(1) {
+    grid-row: 1;
+  }
+  .main-section .card-section .card:nth-of-type(4) {
+    grid-row: 4;
+    grid-column: 1;
+  }
+}
+@media (max-width: 1024px) {
+  .main-section {
+    height: auto;
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;

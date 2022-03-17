@@ -1,0 +1,36 @@
+@media (max-width: 900px) {
+  .main-section {
+    width: 100%;
+    height: auto;
+
+    .main-header {
+      width: 82%;
+      padding: 20px 0px;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .card-section {
+      width: 100%;
+      grid-template-columns: 1fr;
+      margin-bottom: 30px;
+
+      .card:nth-of-type(1) {
+        grid-row: 1;
+      }
+
+      .card:nth-of-type(4) {
+        grid-row: 4;
+        grid-column: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-section {
+    height: auto;
+  }
+}
