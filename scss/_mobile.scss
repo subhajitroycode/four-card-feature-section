@@ -29,8 +29,12 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .main-section {
     height: auto;
+
+    .main-header {
+      width: 100%;
+    }
   }
 }

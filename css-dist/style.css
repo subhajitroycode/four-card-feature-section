@@ -26,13 +26,14 @@ body {
 }
 .main-section .main-header h1 {
   font-weight: 200;
+  font-size: 1.8rem;
 }
 .main-section .main-header h1 span {
   display: block;
   font-weight: 600;
 }
 .main-section .main-header p {
-  padding-top: 20px;
+  padding: 20px 40px 0px;
   opacity: 50%;
   font-size: 1em;
 }
@@ -102,9 +103,12 @@ body {
     grid-column: 1;
   }
 }
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .main-section {
     height: auto;
+  }
+  .main-section .main-header {
+    width: 100%;
   }
 }
 .attribution {
